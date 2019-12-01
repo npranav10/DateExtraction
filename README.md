@@ -41,5 +41,5 @@ imageTobase64.py : Encodes an image to base64 bytes and prints it in the console
 
 
 ***********************************************************************************************************************************************
-An article which will cover all aspects of designing and deploying this system will be publish soon and keep checking this page for the article's link.
+An article which will cover all aspects of designing and deploying this system will be published soon (mostly in Medium.com) and keep checking this page for the article's link.
 ***********************************************************************************************************************************************
