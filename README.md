@@ -25,7 +25,7 @@ Behind the Scenes:
 
 Steps to run the program locally:
 1) `git clone https://github.com/npranav10/DateExtraction`
-2) 'cd ./DateExtraction/localTest'
+2) `cd ./DateExtraction/localTest`
 
 A short info about files:
 test.py : Driver code to run extract date from Images. Takes in location of an image as input.
