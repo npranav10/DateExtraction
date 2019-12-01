@@ -5,7 +5,7 @@ This repo contains the source code for system which extracts date from images in
 To ease this functionality an API has been deployed in Heroku platform.
 
 
-API Details:
+#### API Details:
 1) URL : "http://npranav10-extractdate.herokuapp.com/extractDate"
 2) The API accepts only base64 encoded bytes of an image
 3) Request Header : "application/json" in the form {“base_64_image_content”: <base_64_image_content>}
@@ -18,14 +18,15 @@ If date is not present:
 
 
 
-Behind the Scenes:
+#### Behind the Scenes:
 1) Flask framework is used to a make a web app in Python to serve the API requests. 
 2) Python driver code: "pytesseract" package is used to extract text from image and "js2py" package for advanced regex matching to match all possible data formats. 
 3) Heroku platform is used to host the API.
 
-Steps to run the program locally:
+#### Steps to run the program locally:
 1) `git clone https://github.com/npranav10/DateExtraction`
 2) `cd ./DateExtraction/localTest`
+3) `python test.py ./pathtoimage/imagename.jpg`
 
 A short info about files:
 test.py : Driver code to run extract date from Images. Takes in location of an image as input.
