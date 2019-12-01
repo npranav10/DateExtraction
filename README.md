@@ -19,7 +19,19 @@ If date is not present:
 
 
 Behind the Scenes:
-1) Flask framework to a make app in Python to serve the API requests. 
-2) Python driver code: "pytesseract" package to extract text from image and using advanced regex matching using "js2py" package to match all possible data formats. 
+1) Flask framework is used to a make a web app in Python to serve the API requests. 
+2) Python driver code: "pytesseract" package is used to extract text from image and "js2py" package for advanced regex matching to match all possible data formats. 
 3) Heroku platform is used to host the API.
 
+Steps to run the program locally:
+1) `git clone https://github.com/npranav10/DateExtraction`
+2) 'cd ./DateExtraction/localTest'
+
+A short info about files:
+test.py : Driver code to run extract date from Images. Takes in location of an image as input.
+e.g : `python test.py ./Receipts/1.jpg`
+
+devtest.py : A script to automate execution of test.py for all images in the Receipts folder.
+e.g : `python devtest.py`
+
+imageTobase64.py : Encodes an image to base64 bytes and prints it in the console.
