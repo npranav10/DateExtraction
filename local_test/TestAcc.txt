@@ -1,0 +1,22 @@
+
+After Test Intertion 4:
+
+1) Pytesseract was not able to extract even a single character from 54 of the images and was not able to stream in bytes from 6 of the images
+2) Many images are in the format Mar18'18 ,in which the " ' " is not decoded properly. Hence regex doesnot work.
+3) 204 images were found not to have a valid date or improper decoding by Pytesseract.
+4) Date formats:
+
+mmmdd'yy
+mmmdd,yyyy
+mm/dd/yy
+dd/mm/yy
+dd/mm/yyyy
+mm/dd/yyyy
+dd-mmm-yyyy
+
+5) System was able to correctly extract dates from 330 of the receipts. 
+
+6) Current detection Accuracy: 61.6% which can be improved to 
+ (i) 89% (535/595) if a failproof decoding is used.
+ (ii) 100% (595/595) if pytesseract package binaries can be trained to detect text in low light sceanrios or is tweaked to fit the current set of images. The former option is preferred.
+
