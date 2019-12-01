@@ -29,6 +29,8 @@ If date is not present:
 3) `python test.py ./pathtoimage/imagename.jpg`
 
 A short info about files:
+
+
 test.py : Driver code to run extract date from Images. Takes in location of an image as input.
 e.g : `python test.py ./Receipts/1.jpg`
 
@@ -36,3 +38,8 @@ devtest.py : A script to automate execution of test.py for all images in the Rec
 e.g : `python devtest.py`
 
 imageTobase64.py : Encodes an image to base64 bytes and prints it in the console.
+
+
+***********************************************************************************************************************************************
+An article which will cover all aspects of designing and deploying this system will be publish soon and keep checking this page for the article's link.
+***********************************************************************************************************************************************
