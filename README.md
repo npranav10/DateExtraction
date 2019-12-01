@@ -8,7 +8,7 @@ To ease this functionality an API has been deployed in Heroku platform.
 #### API Details:
 1) URL : "http://npranav10-extractdate.herokuapp.com/extractDate"
 2) The API accepts only base64 encoded bytes of an image
-3) Request Header : "application/json" in the form {“base_64_image_content”: <base_64_image_content>}
+3) POST method : Request Header : "application/json" in the form {“base_64_image_content”: <base_64_image_content>}
 4) Response Header : "application/json" in the form
 
 If date is present:
