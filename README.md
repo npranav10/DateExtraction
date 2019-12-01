@@ -3,6 +3,8 @@
 This repo contains the source code for system which extracts date from images in the required format.
 
 To ease this functionality an API has been deployed in Heroku platform.
+
+
 API Details:
 1)URL : "http://npranav10-extractdate.herokuapp.com/extractDate"
 2) The API accepts only base64 encoded bytes of an image
