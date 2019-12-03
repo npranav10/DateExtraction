@@ -1,3 +1,4 @@
+#Importing Dependencies
 from flask import Flask, request
 import js2py
 import json
@@ -5,9 +6,11 @@ import pytesseract
 from PIL import Image
 import base64
 
-
+#Flask App init
 app = Flask(__name__)
  
+
+# POST Method driver code
 @app.route("/extractDate", methods=['POST'])
 def hello():
 	
@@ -26,6 +29,9 @@ def hello():
 
 	function $(temp) {   
 
+
+	//function to convert month name to month number
+	
 	function getMonth(m){
 	m = ("janfebmaraprmayjunjulaugsepoctnovdec".indexOf(m.toLowerCase()) / 3 + 1).toString() ;
 	if(m.length == 1)
@@ -38,6 +44,8 @@ def hello():
 	}
 
 	}
+
+	//regex for matching different date formats
 	var states = /([\s](?:[A][L]|[A][K]|[A][Z]|[A][R]|[C][A]|[C][O]|[C][T]|[D][E]|[F][L]|[G][A]|[H][I]|[I][D]|[I][L]|[I][N]|[I][A]|[K][S]|[K][Y]|[L][A]|[M][E]|[M][D]|[M][A]|[M][I]|[M][N]|[M][S]|[M][O]|[M][T]|[N][E]|[N][V]|[N][H]|[N][J]|[N][M]|[N][Y]|[N][C]|[N][D]|[O][H]|[O][K]|[O][R]|[P][A]|[R][I]|[S][C]|[S][D]|[T][N]|[T][X]|[U][T]|[V][T]|[V][A]|[W][A]|[W][V]|[W][I]|[W][Y])[\s])/i;
 	
 	var ddmmyyyy = /(?:[0-9]|[0-3][0-9])(?:[./-]|[\s])(?:[0-9]|[0-1][0-9])(?:[./-]|[\s])[1-2][0-9][0-9][0-9]/i;
@@ -62,6 +70,9 @@ def hello():
 	
 	var t;
 	
+
+	//convert dates to yyyy-mm-dd format
+
 	if(temp.match(monthddyyyy))
 	{
 		t= temp.match(monthddyyyy)[0].toString();
@@ -153,9 +164,13 @@ def hello():
 	    return( str("{ 'date': 'null' }"));
 	
 
+
+#GET Method driver code
 @app.route("/extractDate", methods=['GET'])
 def helloget():
 	return("GET is working fine")
 
+
+# Flask App Init
 if __name__ == "__main__":
 	app.run(debug=True,host="0.0.0.0")
